@@ -1,0 +1,22 @@
+.login {
+  background-image: url("../assets/tobias-tullius-yoT88Qjmsqo-unsplash.jpg");
+  background-size: cover;
+  /* Set background repeat to no-repeat */
+  background-repeat: no-repeat;
+  /* Center the background image horizontally and vertically */
+  background-position: center;
+  /* Optionally, you can set background color as a fallback */
+  background-color: #f8f8f8; /* Fallback color */
+  height: 100vh;
+}
+.formcontainer {
+  height: 500px;
+  margin-left: 500px;
+  width: 500px;
+  text-align: center;
+  color: whitesmoke;
+  height: 100vh;
+}
+.input {
+  margin: 0 auto;
+}

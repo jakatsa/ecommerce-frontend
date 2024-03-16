@@ -5,13 +5,13 @@ import "./index.css";
 //import product provider
 import ProductProvider from "./context/ProductContext.jsx";
 //import sidebar provider
-import { SideBarProvider } from "./context/SideBarContext.jsx";
+import SidebarProvider from "./context/SideBarContext.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <SideBarProvider>
+  <SidebarProvider>
     <ProductProvider>
       <React.StrictMode>
         <App />
       </React.StrictMode>
     </ProductProvider>
-  </SideBarProvider>
+  </SidebarProvider>
 );

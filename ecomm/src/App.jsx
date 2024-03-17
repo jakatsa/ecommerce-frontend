@@ -95,7 +95,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login setisauth={setIsAuth} />} />
           <Route path="/landingPage" element={<LandingPage />} />
-          <Route path="/ProductDetails" element={<ProductDetails />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/SideBar" element={<SideBar />} />
           <Route path="/Header" element={<Header />} />
         </Routes>

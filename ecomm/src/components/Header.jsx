@@ -10,11 +10,8 @@ export const Header = () => {
     <header className="bg-pink-200">
       <div>Header</div>
 
-      <div
-        onClick={() => setIsOpen(!isOpen)}
-        className="cursor-pointer flex relative"
-      >
-        <BsBag className="text-2xl" />
+      <div className="cursor-pointer flex relative">
+        <BsBag className="text-2xl" onClick={() => setIsOpen(!isOpen)} />
       </div>
       <SideBar />
     </header>

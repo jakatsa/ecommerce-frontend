@@ -1,7 +1,11 @@
-import React from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 import { IoMdClose, IoMdRemove, IoMdAdd } from "react-icons/io";
 export const CartItem = ({ item }) => {
+  //use context
+  const { removeFromCart, increaseAmount, decreaseAmount } =
+    useContext(CartContext);
   //destructive item
   const { id, title, image, price, amount } = item;
 
@@ -28,7 +32,10 @@ export const CartItem = ({ item }) => {
               {title}
             </Link>
             {/**remove icon */}
-            <div className="text-xl cursor-pointer">
+            <div
+              className="text-xl cursor-pointer"
+              onClick={() => removeFromCart(id)}
+            >
               <IoMdClose className="text-gray-500 hover:text-red-500 transition" />
             </div>
           </div>
@@ -45,9 +52,9 @@ export const CartItem = ({ item }) => {
               {/*minus icon*/}
               <div
                 className="flex-1 h-full flex
-              justify-center items-center cursor-pointer"
+              justify-center items-center cursor-pointer h-full"
               >
-                <IoMdRemove />
+                <IoMdRemove onClick={() => decreaseAmount(id)} />
               </div>
               {/***amount */}
               <div
@@ -61,7 +68,7 @@ export const CartItem = ({ item }) => {
                 className="flex-1 h-full flex
               justify-center items-center cursor-pointer"
               >
-                <IoMdAdd />
+                <IoMdAdd onClick={() => increaseAmount(id)} />
               </div>
             </div>
             {/**item price */}

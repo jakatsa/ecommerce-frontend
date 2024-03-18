@@ -33,7 +33,7 @@ export const CartItem = ({ item }) => {
             </Link>
             {/**remove icon */}
             <div
-              className="text-xl cursor-pointer"
+              className="text-xl cursor-pointer  h-full"
               onClick={() => removeFromCart(id)}
             >
               <IoMdClose className="text-gray-500 hover:text-red-500 transition" />

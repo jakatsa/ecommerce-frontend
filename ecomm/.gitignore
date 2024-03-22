@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Remove or comment out the line that ignores package-lock.json
+# package-lock.json

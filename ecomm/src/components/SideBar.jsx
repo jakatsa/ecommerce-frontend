@@ -55,6 +55,16 @@ export const SideBar = () => {
             <FiTrash2 onClick={clearCart} />
           </div>
         </div>
+       <link to ='/' className='bg-gray-200 flex p-4 justify-center 
+       items-center text-primary w-full font-medium'
+       >  
+       View cart 
+       </link> 
+       <link to ='/' className='bg-gray-200 flex p-4 justify-center 
+       items-center text-primary w-full font-medium'
+       >  
+       Continue Shopping
+       </link> 
       </div>
     </div>
   );

@@ -28,11 +28,14 @@ export const ProductDetails = () => {
       <Header />
       <section
         className="pt-32 pb-12 lg:py-32 h-screen 
-    flex items-center"
+    flex items-center tetx-white"
       >
-        <div className="container mx-auto ">
+        <div className="container mx-auto flex">
           <div className="flex flex-col lg:flex-row items-center">
-            <div className="flex flex-1 justify-center items-center mb-8 lg:mb-0">
+            <div
+              className="flex flex-1 justify-center items-center mb-8 lg:mb-0"
+              style={{ marginRight: "200px" }}
+            >
               <img className="max-w-[200px] lg:max-w-sm" src={image} alt="" />
             </div>
           </div>
@@ -53,7 +56,9 @@ export const ProductDetails = () => {
             <button
               onClick={() => addToCart(product, product.id)}
               className="bg-primary py-4 px-8 text-white"
-            ></button>
+            >
+              Add To Cart
+            </button>
           </div>
         </div>
       </section>

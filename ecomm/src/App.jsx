@@ -9,6 +9,7 @@ import { auth } from "./firebase-config";
 import { ProductDetails } from "./components/ProductDetails";
 import { SideBar } from "./components/SideBar";
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -100,6 +101,7 @@ function App() {
           <Route path="/Header" element={<Header />} />
         </Routes>
       </Router>
+      <Footer />
     </div>
   );
 }

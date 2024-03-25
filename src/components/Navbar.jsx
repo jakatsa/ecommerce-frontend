@@ -1,15 +1,26 @@
-import React from "react";
+import React from 'react'
+import './Navbar.css';
+import toggle_light from '../../assets/night.png';
+import toggle_dark from '../../assets/day.png';
 
-const Navbar = () => {
+const Navbar = ({theme, setTheme}) => {
+
+    const toggle_mode = ()=>{
+      theme ==  "light" ? setTheme("dark") :  setTheme("light");
+    }
+ 
   return (
-    <div>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/LandingPage ">LandingPage </Link>
-      </nav>
-    </div>
-  );
-};
+    <div className='navbar'>
+        <ul>
+            <li>Home</li>
+            <li>Login</li>
+        </ul>
 
-export default Navbar;
+        <img onClick={()=>{toggle_mode()}} src={theme == 'light' ? toggle_light: toggle_dark} alt="" className='toggle-icon'/>
+
+    </div>
+    
+  )
+}
+
+export default Navbar

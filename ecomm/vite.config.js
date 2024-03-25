@@ -8,7 +8,7 @@ export default defineConfig({
     // Set the entry point to your main JavaScript file
     rollupOptions: {
       input: {
-        main: "./main.jsx", // Adjust the path as needed
+        main: "./src/main.jsx", // Adjust the path as needed
       },
     },
   },

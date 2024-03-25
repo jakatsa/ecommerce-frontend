@@ -1,15 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/ecommerce-frontend", // Set the base URL if needed
-  build: {
-    // Set the entry point to your main JavaScript file
-    rollupOptions: {
-      input: {
-        main: "./src/main.jsx", // Adjust the path as needed
-      },
-    },
-  },
+  base: "/ecommerce-frontend",
 });

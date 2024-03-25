@@ -67,35 +67,26 @@ function App() {
             }`}
           >
             <div className="text-sm lg:flex-grow sidebar">
-              <Link
-                to="/"
-                className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
-              >
-                Home
-              </Link>
               {!isAuth ? (
                 <Link
                   to="/login"
                   className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4"
+                  style={{ marginLeft: "1200px" }}
                 >
                   Login
                 </Link>
               ) : (
-                <button onClick={signOutUser}>Logout</button>
+                <button onClick={signOutUser} style={{ marginLeft: "1200px" }}>
+                  Logout
+                </button>
               )}
-              <Link
-                to="/landingPage"
-                className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400"
-              >
-                Landing Page
-              </Link>
             </div>
           </div>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login setisauth={setIsAuth} />} />
-          <Route path="/landingPage" element={<LandingPage />} />
+
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/SideBar" element={<SideBar />} />
           <Route path="/Header" element={<Header />} />

@@ -5,8 +5,12 @@ export const Hero = () => {
   return (
     <section
       className=" bg-hero 
-    bg-n-repeat bg-cover bg-center py-24 text-white"
-      style={{ height: "800px" }}
+    bg-n-repeat bg-cover bg-center py-24 text-dark"
+      style={{
+        height: "800px",
+        backgroundImage:
+          "url('https://thumbs.dreamstime.com/b/shopping-banner-brunette-beauty-27700331.jpg')",
+      }}
     >
       <div
         className="container mx-auto flex
@@ -23,7 +27,7 @@ export const Hero = () => {
             bg-red-500 mr-3"
               style={{ height: "2px" }}
             >
-              New Trend
+              {/**     New Trend*/}
             </div>{" "}
             <br />
             <h1
@@ -45,10 +49,10 @@ export const Hero = () => {
         </div>
         {/**image */}
         <div className="hidden lg:block">
-          <img
+          {/** <img
             src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/bltab6956aa239e5073/65ce33e95c8110040ab88770/lookman_nigeria.jpg?auto=webp&format=pjpg&width=1200&quality=60"
             style={{ width: "100px" }}
-          />
+          /> */}
         </div>
       </div>
     </section>
